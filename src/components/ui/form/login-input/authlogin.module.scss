@@ -1,0 +1,48 @@
+.LoginInput {
+    width: 100%;
+    display: inline-block;
+
+    &__text {
+        color: #484038;
+        font-family: 'SF Pro Display';
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 10px;
+
+      
+    }
+
+    &__input {
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid rgb(72, 64, 56, 0.2);
+
+        background: #FAFAFA;
+        padding: 14px 15px;
+        color: #484038;
+        font-family: 'SF Pro Display';
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        outline: none;
+
+
+        &::placeholder {
+            color: rgba(118, 112, 106, 0.80);
+            font-family: "SF Pro Display";
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        &:focus {
+            border: 1px solid #0047FF;
+
+            box-shadow: 0px 0px 0px 3px rgba(0, 71, 255, 0.15);
+        }
+    }
+}

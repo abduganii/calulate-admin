@@ -1,98 +1,114 @@
 .Filter {
-    width: 100%;
-    border-top: 1px solid rgba(72, 64, 56, 0.10);
-    border-bottom: 1px solid rgba(72, 64, 56, 0.10);
-    background: #F6F5F5;
-    padding-left: 30px;
-    padding-right: 60px;
+  width: 100%;
+  border-top: 1px solid rgba(72, 64, 56, 0.1);
+  border-bottom: 1px solid rgba(72, 64, 56, 0.1);
+  background: #f6f5f5;
+  padding-left: 30px;
+  padding-right: 60px;
+  display: flex;
+  //   align-items: center;
+  justify-content: space-between;
+
+  &__filters {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    width: 100%;
 
-    &__filters {
-        display: flex;
-        align-items: center;
-        width: 100%;
+    &__input {
+      border: none;
+      padding: 12px 0;
+      background-color: transparent;
+      outline: none;
+      width: 100%;
+      max-width: 226px;
+      color: #000000;
+      font-family: SF Pro Display;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      height: 100%;
 
-        &__input {
-            border: none;
-            padding: 12px 0;
-            background-color: transparent;
-            outline: none;
-            width: 100%;
-            max-width: 226px;
-            color: #000000;
-            font-family: SF Pro Display;
-            font-size: 13px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-
-            &::placeholder {
-                color: #76706A;
-                font-family: SF Pro Display;
-                font-size: 13px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-            }
-        }
-
-        &__search {
-            padding-left: 21px;
-            background-image: url('/search.svg');
-            background-repeat: no-repeat;
-            background-size: 16px 16px;
-            background-position: left center;
-        }
-
-        &__select {
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-left: 1px solid rgba(72, 64, 56, 0.10);
-            border-right: 1px solid rgba(72, 64, 56, 0.10);
-            padding-left: 16px;
-            padding-right: 16px;
-            position: relative;
-        }
-
-
+      &::placeholder {
+        color: #76706a;
+        font-family: SF Pro Display;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
     }
 
-    &__form {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        gap: 30px;
-
-        width: 100%;
-
-        &__all {
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-
-            p {
-                color: #484038;
-                font-family: SF Pro Display;
-                font-size: 13px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-                opacity: .6;
-            }
-        }
+    &__search {
+      padding-left: 21px;
+      background-image: url("/search.svg");
+      background-repeat: no-repeat;
+      background-size: 16px 16px;
+      background-position: left center;
     }
+
+    &__tel {
+      padding-left: 41px;
+      background-image: url("/fi_smartphone.svg");
+      background-repeat: no-repeat;
+      background-size: 50px 16px;
+      background-position: left center;
+      border-left: 1px solid rgba(72, 64, 56, 0.1);
+    }
+    &__ark {
+      padding-left: 41px;
+      background-image: url("/alt.svg");
+      background-repeat: no-repeat;
+      background-size: 50px 16px;
+      background-position: left center;
+      border-left: 1px solid rgba(72, 64, 56, 0.1);
+    }
+    &__select {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-left: 1px solid rgba(72, 64, 56, 0.1);
+      border-right: 1px solid rgba(72, 64, 56, 0.1);
+      padding-left: 16px;
+      padding-right: 16px;
+      position: relative;
+    }
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30px;
+
+    width: 100%;
+
+    &__all {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      p {
+        color: #484038;
+        font-family: SF Pro Display;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        opacity: 0.6;
+        padding: 20px 0;
+      }
+    }
+  }
 }
 
 .backruond {
-    display: none;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    position: absolute;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: absolute;
 }

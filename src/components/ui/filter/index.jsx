@@ -1,4 +1,6 @@
 import { useRef, useState } from "react";
+import { useSearchParams } from "react-router-dom";
+import paramsToObject from "../../../hooks/paramsToObject";
 import BlueBtn from "../button/blue-buttun";
 import DropDawn from "../dropdawn";
 import { Checked, DawnIcan, DeleteIcon, PlusIcon } from "../icons";
@@ -12,7 +14,7 @@ export default function Filter({
   page,
   ...other
 }) {
-  console.log(page);
+  const [params, setSearchParams] = useSearchParams()
   const [openStatus, setOpenSatus] = useState(false);
 
   const [bac, setbac] = useState(false);
@@ -58,16 +60,16 @@ export default function Filter({
         {(page == "colorWall" ||
           page == "moreService" ||
           page == "detailService") && (
-          <input
-            className={`${cls.Filter__filters__input} ${cls.Filter__filters__ark}`}
-            type="text"
-            placeholder={"Артикул"}
-          />
-        )}
+            <input
+              className={`${cls.Filter__filters__input} ${cls.Filter__filters__ark}`}
+              type="text"
+              placeholder={"Артикул"}
+            />
+          )}
       </div>
 
       <div className={cls.Filter__form}>
-        <div className={cls.Filter__form__all} onClick={SelectAll}>
+        <div className={cls.Filter__form__all} onClick={() => setSearchParams({ ...paramsToObject(params.entries()), deleteId: "all" })}>
           <Checked fill={"#484038"} />
           <p>Выбрать все</p>
         </div>
@@ -76,8 +78,12 @@ export default function Filter({
           <p>Удалить</p>
         </div>
         {page != "order" && page != "client" ? (
-          <BlueBtn style={{ gap: "5px", maxWidth: "151px" }}>
-            <PlusIcon fill={"white"} />
+          <BlueBtn
+            className={`${params.get('openMadal') == "post" || params.get('openMadal') == "put" ? cls.Filter__activeBtn : ""}`}
+            onClick={() => setSearchParams({ ...paramsToObject(params.entries()), openMadal: "post" })}
+            style={{ gap: "5px", maxWidth: "151px" }}>
+
+            <PlusIcon fill={params.get('openMadal') == "post" || params.get('openMadal') == "put" ? "#484038" : "white"} />
             Добавить
           </BlueBtn>
         ) : (

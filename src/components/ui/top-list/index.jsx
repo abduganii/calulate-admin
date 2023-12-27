@@ -24,9 +24,9 @@ export default function TopList(
             </li>
             {
                 array?.map((e, i) => (
-                    <li className={cls.TopList__item} key={i}>{e}</li>
+                    <li className={`${cls.TopList__item}  ${e === "Фото" && cls.TopList__item__img} `} key={i}>{e}</li>
                 ))
             }
-        </ul>
+        </ul >
     )
 }

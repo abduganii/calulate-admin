@@ -55,6 +55,7 @@
       background-position: left center;
       border-left: 1px solid rgba(72, 64, 56, 0.1);
     }
+
     &__ark {
       padding-left: 41px;
       background-image: url("/alt.svg");
@@ -63,6 +64,7 @@
       background-position: left center;
       border-left: 1px solid rgba(72, 64, 56, 0.1);
     }
+
     &__select {
       cursor: pointer;
       display: flex;
@@ -101,6 +103,12 @@
         padding: 20px 0;
       }
     }
+  }
+
+  &__activeBtn {
+    color: rgba(72, 64, 56, 0.80);
+    opacity: 0.5;
+    background: rgb(142, 136, 132, .4);
   }
 }
 

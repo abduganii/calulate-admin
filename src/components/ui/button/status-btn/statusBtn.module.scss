@@ -1,0 +1,32 @@
+.StatusBtn {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+
+    &__text {
+        color: rgba(241, 98, 37, 0.80);
+        text-align: center;
+        font-family: SF Pro Display;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        padding: 3px 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        border-radius: 2.961px;
+
+        background: rgba(241, 98, 37, 0.10);
+    }
+}
+
+.backruond {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: absolute;
+}

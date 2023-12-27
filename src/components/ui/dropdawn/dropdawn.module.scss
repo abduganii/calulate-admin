@@ -1,0 +1,33 @@
+.DropDawn {
+    width: 100%;
+    max-width: 226px;
+    position: absolute;
+    border: 1px solid #E5E3E2;
+    background: #FFF;
+    box-shadow: 0px 24px 44px 0px rgba(0, 0, 0, 0.08);
+    padding: 10px 8px;
+    z-index: 10;
+
+    li {
+        color: #484038;
+        font-family: 'SF Pro Display';
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding: 8px 22px;
+
+        border-radius: 3px;
+        cursor: pointer;
+
+        &:hover {
+            color: #0047FF;
+            background-color: rgb(0, 71, 255, .07);
+        }
+    }
+
+    &__active {
+        color: #0047FF;
+        background-color: rgb(0, 71, 255, .07);
+    }
+}

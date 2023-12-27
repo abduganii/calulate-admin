@@ -1,0 +1,83 @@
+.ListItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 20px;
+    padding-left: 15px;
+    margin-left: 15px;
+    margin-right: 60px;
+    padding-bottom: 19px;
+    border: 1px solid rgba(72, 64, 56, 0.10);
+
+    border-bottom: none;
+
+    &__withImg {
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+
+    &__img {
+        width: 100%;
+
+        img {
+            width: 60px;
+            height: 70px;
+            object-fit: contain;
+        }
+    }
+
+    &__detail {
+        width: 100%;
+        color: rgba(118, 112, 106, 0.80);
+
+        font-family: SF Pro Display;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    &__name {
+        color: #76706A;
+        font-family: SF Pro Display;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 18px;
+    }
+
+    &__tel {
+        color: #3D9CE0;
+        font-family: SF Pro Display;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 18px;
+    }
+
+    &__price {
+        color: #484038;
+        font-family: SF Pro Display;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    &:last-child {
+        border-bottom: 1px solid rgba(72, 64, 56, 0.10);
+    }
+
+    p {
+        width: 100%;
+    }
+
+    &__action {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 5px;
+        padding-right: 20px;
+    }
+}

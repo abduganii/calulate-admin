@@ -31,7 +31,7 @@ export const SiteBarArr = [
             {
                 id: 41,
                 text: 'Тип профили',
-                link: '/ask',
+                link: '/ask/type',
             },
             {
                 id: 42,

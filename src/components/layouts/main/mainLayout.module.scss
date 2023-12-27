@@ -1,4 +1,8 @@
 .MainLayout {
     display: flex;
     width: 100%;
+
+    &__content {
+        width: 100%;
+    }
 }

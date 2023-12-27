@@ -1,0 +1,27 @@
+.CheckBox {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    input {
+        display: none;
+    }
+
+    &__round {
+        width: 14px;
+        height: 14px;
+        border-radius: 42px;
+        border: 1px solid rgba(72, 64, 56, 0.60);
+        background: transparent;
+
+        &__active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid transparent;
+            background: #0047FF;
+        }
+    }
+
+}

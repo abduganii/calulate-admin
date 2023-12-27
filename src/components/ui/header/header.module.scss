@@ -1,0 +1,70 @@
+.Header {
+    width: 100%;
+    padding: 10px 30px;
+    padding-right: 69px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__control {
+        display: flex;
+        align-items: center;
+
+
+        div {
+            padding: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .3s ease;
+
+            &:hover {
+                background: rgb(0, 0, 0, .03);
+                border-radius: 50%;
+            }
+
+            &:active {
+                background: transparent;
+
+            }
+        }
+
+        &__text {
+            color: #6D6660;
+
+            font-family: 'SF Pro Display';
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            margin-left: 12px;
+        }
+    }
+
+    &__icons {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        div {
+            padding: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .3s ease;
+
+            &:hover {
+                background: rgb(0, 0, 0, .03);
+                border-radius: 50%;
+            }
+
+            &:active {
+                background: transparent;
+
+            }
+        }
+    }
+
+}

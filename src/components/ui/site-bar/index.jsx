@@ -7,7 +7,7 @@ import cls from "./siteBar.module.scss"
 
 export default function SiteBar() {
     const pashName = useLocation()
-    console.log(pashName)
+
     return (
         <div className={cls.SiteBar}>
             <div>

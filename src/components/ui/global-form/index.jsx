@@ -61,16 +61,12 @@ export default function GlobalForm({ page, table = [], url, method, }) {
                 {
                     page == "detailService" && <ListItem
 
-                        details={["Большие", "Sborka extra updated", "<=", "Glass 1", "9.00 $"]}
+                        details={["Большие", "Sborka extra updated", "<=", "Glass", "9.00 $"]}
 
                     />
                 }
                 {
-                    page == "opneType
-                    
-                    
-                    
-                    " && <ListItem
+                    page == "opneType" && <ListItem
                         img={"empty"}
                         details={["Прозрачное", "Glass 1", "1"]}
 

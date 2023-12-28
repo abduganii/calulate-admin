@@ -1,4 +1,5 @@
 import Filter from "../../ui/filter";
+import AddInput from "../../ui/form/add-input";
 import GlobalForm from "../../ui/form/global-form";
 import ListItem from "../../ui/item-list";
 import Pagination from "../../ui/pagination";
@@ -20,11 +21,11 @@ export default function DetailsServicePage() {
           ]}
         />
         <GlobalForm>
-          <p style={{ width: "100%" }}>hello</p>
-          <p style={{ width: "100%" }}>hello</p>
-          <p style={{ width: "100%" }}>hello</p>
-          <p style={{ width: "100%" }}>hello</p>
-          <p style={{ width: "100%" }}>hello</p>
+          <AddInput type={"text"} placeholder={"Название"} />
+          <AddInput type={"text"} placeholder={"Артикул"} />
+          <AddInput type={"text"} placeholder={"Оператор условия"} />
+          <AddInput type={"text"} placeholder={"Высота фасада"} />
+          <AddInput type={"text"} placeholder={"Цена"} />
         </GlobalForm>
         <ListItem
           details={["Большие", "Sborka extra updated", "<=", "Glass", "9.00 $"]}

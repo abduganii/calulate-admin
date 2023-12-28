@@ -14,10 +14,21 @@ export default function TypeProfilePage() {
           array={["Название", "Тип расчета", "Индекс сортировки", "Действия"]}
         />
         <GlobalForm>
-          <AddInput type={"text"} placeholder={"Название"} />
-          <AddInput type={"text"} placeholder={"Название"} />
-          <AddInput type={"number"} placeholder={"count"} />
+          <AddInput
+            type={"text"}
+            placeholder={"Название"}
+          />
+          <AddInput
+            type={"select"}
+            placeholder={"Выберите тип расчета"}
+            value={'Выберите тип расчета'}
+          />
+          <AddInput
+            type={"number"}
+            placeholder={"count"}
+          />
         </GlobalForm>
+
         <ListItem
           details={["Стандартный (19 мм)", "Стандартные профили", "1"]}
         />

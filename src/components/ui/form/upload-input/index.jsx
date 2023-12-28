@@ -1,15 +1,15 @@
+import { Uploadcon } from "../../icons";
 import cls from "./addInput.module.scss";
 
-const UploadInput = ({ type, placeholder, onChange, className, ...other }) => {
+const UploadInput = ({ value, onChange, className, ...other }) => {
+
   return (
     <div className={cls.AddInput__wrap}>
-      <input
-        className={`${cls.AddInput} ${className && className}`}
-        type={type}
-        placeholder={placeholder}
-        onChange={onChange}
-        {...other}
-      />
+      <label className={cls.AddInput}  {...other}>
+        <input type="file" accept="image/jpeg, image/png" onChange={onChange} />
+        {value ? <img src={value} /> : <Uploadcon />}
+
+      </label>
     </div>
   );
 };

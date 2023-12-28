@@ -12,8 +12,14 @@ export default function ColerProfilePage() {
         <Filter page={"coler"} />
         <TopList array={["Название", "Индекс сортировки", "Действия"]} />
         <GlobalForm>
-          <AddInput type={"text"} placeholder={"Название"} />
-          <AddInput type={"number"} placeholder={"count"} />
+          <AddInput
+            type={"text"}
+            placeholder={"Название"}
+          />
+          <AddInput
+            type={"number"}
+            placeholder={"count"}
+          />
         </GlobalForm>
         <ListItem details={["Черный", "1"]} />
       </div>

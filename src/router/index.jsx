@@ -15,10 +15,10 @@ import WallColerPage from '../components/page/wall-color'
 
 export default function AppRouter() {
 
-    // const navigate = useNavigate()
-    // useEffect(() => {
-    //     navigate('auth/login')
-    // }, [])
+    const navigate = useNavigate()
+    useEffect(() => {
+        navigate('auth/login')
+    }, [])
     return (
         <Routes>
             <Route path="/" element={<MainLayout />}  >

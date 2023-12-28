@@ -1,0 +1,25 @@
+.AddInput {
+  width: 60px;
+  margin-left: 10px;
+  border-radius: 3px;
+  border: 1px solid rgba(72, 64, 56, 0.1);
+  background: #fff;
+  color: #484038;
+  font-family: SF Pro Display;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 150% */
+  padding: 11px 24px;
+  outline: none;
+  &:focus {
+    border-radius: 3px;
+    border: 1px solid #0047ff;
+    background: #fff;
+    box-shadow: 0px 0px 0px 3px rgba(0, 71, 255, 0.15);
+  }
+
+  &__wrap {
+    min-width: 100px;
+  }
+}

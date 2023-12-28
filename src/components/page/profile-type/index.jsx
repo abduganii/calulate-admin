@@ -1,26 +1,28 @@
 import Filter from "../../ui/filter";
+import AddInput from "../../ui/form/add-input";
 import GlobalForm from "../../ui/form/global-form";
 import ListItem from "../../ui/item-list";
 import Pagination from "../../ui/pagination";
 import TopList from "../../ui/top-list";
 
 export default function TypeProfilePage() {
-    return (
-        <>
-            <Filter page={'typeprofile'} />
-            <div>
-                <TopList array={["Название", "Тип расчета", "Индекс сортировки", "Действия"]} />
-                <GlobalForm>
-                    <p style={{ width: "100%" }}>hello</p>
-                    <p style={{ width: "100%" }}>hello</p>
-                    <p style={{ width: "100%" }}>hello</p>
-                </GlobalForm>
-                <ListItem
-                    details={["Стандартный (19 мм)", "Стандартные профили", "1"]}
-                />
-            </div>
-            <Pagination totalPages={10} />
-
-        </>
-    )
+  return (
+    <>
+      <div>
+        <Filter page={"typeprofile"} />
+        <TopList
+          array={["Название", "Тип расчета", "Индекс сортировки", "Действия"]}
+        />
+        <GlobalForm>
+          <AddInput type={"text"} placeholder={"Название"} />
+          <AddInput type={"text"} placeholder={"Название"} />
+          <AddInput type={"number"} placeholder={"count"} />
+        </GlobalForm>
+        <ListItem
+          details={["Стандартный (19 мм)", "Стандартные профили", "1"]}
+        />
+      </div>
+      <Pagination totalPages={10} />
+    </>
+  );
 }

@@ -1,24 +1,23 @@
 import Filter from "../../ui/filter";
+import AddInput from "../../ui/form/add-input";
 import GlobalForm from "../../ui/form/global-form";
 import ListItem from "../../ui/item-list";
 import Pagination from "../../ui/pagination";
 import TopList from "../../ui/top-list";
 
 export default function ColerProfilePage() {
-    return (
-        <>
-            <Filter page={'coler'} />
-            <div>
-                <TopList array={["Название", "Индекс сортировки", "Действия"]} />
-                <GlobalForm>
-                    <p style={{ width: "100%" }}>hello</p>
-                    <p style={{ width: "100%" }}>hello</p>
-                </GlobalForm>
-                <ListItem
-                    details={["Черный", "1"]}
-                />
-            </div>
-            <Pagination totalPages={10} />
-        </>
-    )
+  return (
+    <>
+      <div>
+        <Filter page={"coler"} />
+        <TopList array={["Название", "Индекс сортировки", "Действия"]} />
+        <GlobalForm>
+          <AddInput type={"text"} placeholder={"Название"} />
+          <AddInput type={"number"} placeholder={"count"} />
+        </GlobalForm>
+        <ListItem details={["Черный", "1"]} />
+      </div>
+      <Pagination totalPages={10} />
+    </>
+  );
 }

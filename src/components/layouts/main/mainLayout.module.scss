@@ -1,9 +1,14 @@
 .MainLayout {
-    display: flex;
+  display: flex;
+  width: 100%;
+
+  &__content {
     width: 100%;
-
-
-    &__content {
-        width: 100%;
-    }
+  }
+  &__wrap {
+    height: calc(100vh - 56px);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
 }

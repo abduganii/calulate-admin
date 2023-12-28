@@ -27,7 +27,7 @@ export default function SiteBar() {
                     {
                         SiteBarArr?.map(e => (
                             <li key={e?.id} className={cls.SiteBar__list__item}>
-                                <NavLink className={`${cls.SiteBar__list__link} ${pashName?.pathname?.includes(e?.link) ? cls.SiteBar__list__linkActive : ""}`} to={e?.link}>
+                                <NavLink className={`${cls.SiteBar__list__link} ${pashName?.pathname?.includes(e?.link) ? cls.SiteBar__list__linkActive : ""}`} to={e?.link + e?.quary}>
                                     <div>
                                         {e?.icon(pashName?.pathname?.includes(e?.link) ? "white" : "#484038")} <p>{e?.text}</p>
                                     </div>
@@ -37,7 +37,7 @@ export default function SiteBar() {
                                     <div className={cls.SiteBar__list__child}>
                                         {
                                             e?.array?.map(el => (
-                                                <NavLink to={el?.link} className={`${cls.SiteBar__list__childLink} ${pashName?.pathname == el?.link ? cls.SiteBar__list__childLinkActive : ""}`} key={el?.id} >
+                                                <NavLink to={el?.link + e?.quary} className={`${cls.SiteBar__list__childLink} ${pashName?.pathname == el?.link ? cls.SiteBar__list__childLinkActive : ""}`} key={el?.id} >
                                                     {el?.text}
                                                 </NavLink>
                                             ))

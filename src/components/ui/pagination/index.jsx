@@ -1,14 +1,12 @@
 import cls from "./pagination.module.scss"
-import React, { useState } from 'react';
+
 import paramsToObject from "../../../hooks/paramsToObject";
 import { useSearchParams } from "react-router-dom";
 
 const Pagination = ({ totalPages, onPageChange }) => {
-    const [currentPage, setCurrentPage] = useState(1);
     const [params, setSearchParams] = useSearchParams()
-    const handlePageChange = (newPage) => {
 
-        setCurrentPage(newPage);
+    const handlePageChange = (newPage) => {
         setSearchParams({ ...paramsToObject(params.entries()), page: newPage })
     };
 
@@ -16,7 +14,7 @@ const Pagination = ({ totalPages, onPageChange }) => {
         const buttons = [];
         const visiblePages = 3; // Adjust the number of visible pages as needed
 
-        let startPage = Math.max(1, currentPage - Math.floor(visiblePages / 2));
+        let startPage = Math.max(1, parseInt(params.get("page")) - Math.floor(visiblePages / 2));
         let endPage = Math.min(totalPages, startPage + visiblePages - 1);
 
         if (endPage - startPage < visiblePages - 1) {
@@ -39,7 +37,7 @@ const Pagination = ({ totalPages, onPageChange }) => {
                 <button
                     key={i}
                     onClick={() => handlePageChange(i)}
-                    className={`${currentPage === i ? cls.pagination__active : ''}`}
+                    className={`${parseInt(params.get("page")) === i ? cls.pagination__active : ''}`}
                 >
                     {i}
                 </button>
@@ -62,11 +60,11 @@ const Pagination = ({ totalPages, onPageChange }) => {
 
     return (
         <div className={cls.pagination}>
-            <button onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>
+            <button onClick={() => handlePageChange(parseInt(params.get("page")) - 1)} disabled={parseInt(params.get("page")) === 1}>
                 &lt;
             </button>
             {renderPaginationButtons()}
-            <button onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages}>
+            <button onClick={() => handlePageChange(parseInt(params.get("page")) + 1)} disabled={parseInt(params.get("page")) === totalPages}>
                 &gt;
             </button>
         </div>

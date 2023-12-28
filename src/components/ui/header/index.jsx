@@ -21,6 +21,10 @@ export default function Header() {
   const goForward = () => {
     window.history.forward();
   };
+  const handleRefresh = () => {
+
+    window.location.reload();
+  };
   useEffect(() => {
     SiteBarArr?.forEach((e) => {
       if (e?.link == pashName?.pathname) {
@@ -41,13 +45,13 @@ export default function Header() {
         <div onClick={goBack}>
           <LeftIcan />
         </div>
-        <div onClick={goForward}>
+        <div onClick={goForward} >
           <RightIcan />
         </div>
         <p className={cls.Header__control__text}>{Head}</p>
       </div>
       <div className={cls.Header__icons}>
-        <div>
+        <div onClick={handleRefresh}>
           <RefreshIcan />
         </div>
         <div>

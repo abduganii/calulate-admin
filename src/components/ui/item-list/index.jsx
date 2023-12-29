@@ -1,5 +1,6 @@
 import StatusBtn from "../button/status-btn";
 import CheckBox from "../form/checkBox";
+import { CommitIcon, DeleteIcon, DocIcon, EditIcon, EyeIcon } from "../icons";
 import cls from "./itemList.module.scss";
 
 export default function ListItem({
@@ -44,7 +45,23 @@ export default function ListItem({
         ))}
       {price && <p className={cls.ListItem__price}>{price}</p>}
       {status && <StatusBtn label={status} onChange={statusChange} />}
-      <div className={cls.ListItem__action}>action</div>
+      <div className={cls.ListItem__action}>
+        <div>
+          <CommitIcon />
+        </div>
+        <div>
+          <DocIcon />
+        </div>
+        <div>
+          <EyeIcon />
+        </div>
+        <div>
+          <EditIcon />
+        </div>
+        <div>
+          <DeleteIcon fill={"#484038"} />
+        </div>
+      </div>
     </li>
   );
 }

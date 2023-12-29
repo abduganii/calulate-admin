@@ -14,7 +14,7 @@ export default function Filter({
   page,
   ...other
 }) {
-  const [params, setSearchParams] = useSearchParams()
+  const [params, setSearchParams] = useSearchParams();
   const [openStatus, setOpenSatus] = useState(false);
 
   const [bac, setbac] = useState(false);
@@ -60,16 +60,24 @@ export default function Filter({
         {(page == "colorWall" ||
           page == "moreService" ||
           page == "detailService") && (
-            <input
-              className={`${cls.Filter__filters__input} ${cls.Filter__filters__ark}`}
-              type="text"
-              placeholder={"Артикул"}
-            />
-          )}
+          <input
+            className={`${cls.Filter__filters__input} ${cls.Filter__filters__ark}`}
+            type="text"
+            placeholder={"Артикул"}
+          />
+        )}
       </div>
 
       <div className={cls.Filter__form}>
-        <div className={cls.Filter__form__all} onClick={() => setSearchParams({ ...paramsToObject(params.entries()), deleteId: "all" })}>
+        <div
+          className={cls.Filter__form__all}
+          onClick={() =>
+            setSearchParams({
+              ...paramsToObject(params.entries()),
+              deleteId: "all",
+            })
+          }
+        >
           <Checked fill={"#484038"} />
           <p>Выбрать все</p>
         </div>
@@ -79,15 +87,32 @@ export default function Filter({
         </div>
         {page != "order" && page != "client" ? (
           <BlueBtn
-            className={`${params.get('openMadal') == "post" || params.get('openMadal') == "put" ? cls.Filter__activeBtn : ""}`}
-            onClick={() => setSearchParams({ ...paramsToObject(params.entries()), openMadal: "post" })}
-            style={{ gap: "5px", maxWidth: "151px" }}>
-
-            <PlusIcon fill={params.get('openMadal') == "post" || params.get('openMadal') == "put" ? "#484038" : "white"} />
+            className={`${
+              params.get("openMadal") == "post" ||
+              params.get("openMadal") == "put"
+                ? cls.Filter__activeBtn
+                : ""
+            }`}
+            onClick={() =>
+              setSearchParams({
+                ...paramsToObject(params.entries()),
+                openMadal: "post",
+              })
+            }
+            style={{ gap: "5px", maxWidth: "151px" }}
+          >
+            <PlusIcon
+              fill={
+                params.get("openMadal") == "post" ||
+                params.get("openMadal") == "put"
+                  ? "#484038"
+                  : "white"
+              }
+            />
             Добавить
           </BlueBtn>
         ) : (
-          ""
+          <div className={cls.Filter__form__none}></div>
         )}
       </div>
 

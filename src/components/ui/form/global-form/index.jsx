@@ -28,7 +28,13 @@ export default function GlobalForm({ children, url, method, id }) {
         >
           Отменить
         </CancelBtn>
-        <BlueBtn style={{ background: "#58A43E", maxWidth: "120px" }}>
+        <BlueBtn
+          style={{
+            background: "#58A43E",
+            maxWidth: "120px",
+            borderRadius: "3px",
+          }}
+        >
           Сохранить
         </BlueBtn>
       </div>

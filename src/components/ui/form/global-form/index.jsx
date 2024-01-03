@@ -8,13 +8,12 @@ export default function GlobalForm({ children, url, method, id }) {
   const [params, setSearchParams] = useSearchParams();
   return (
     <form
-      className={`${cls.GlobalForm} ${
-        params.get("openMadal") == "post" || params.get("openMadal") == "put"
+      className={`${cls.GlobalForm} ${params.get("openMadal") == "post" || params.get("openMadal") == "put"
           ? cls.GlobalForm__open
           : ""
-      }`}
+        }`}
     >
-      <div className={cls.GlobalForm__div}></div>
+      {/* <div className={cls.GlobalForm__div}></div> */}
       {children}
       <div className={cls.GlobalForm__btns}>
         <CancelBtn

@@ -24,5 +24,10 @@
 
   &__wrap {
     width: 100%;
+    min-width: 80px;
+
+    @media screen and (max-width:1150px) {
+      width: calc((100% - 30px) / 2);
+    }
   }
 }

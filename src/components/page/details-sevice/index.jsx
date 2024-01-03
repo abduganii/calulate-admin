@@ -10,26 +10,28 @@ export default function DetailsServicePage() {
     <>
       <div>
         <Filter page={"detailService"} />
-        <TopList
-          array={[
-            "Название",
-            "Артикул",
-            "Оператор условия",
-            "Высота фасада",
-            "Цена",
-            "Действия",
-          ]}
-        />
-        <GlobalForm>
-          <AddInput type={"text"} placeholder={"Название"} />
-          <AddInput type={"text"} placeholder={"Артикул"} />
-          <AddInput type={"text"} placeholder={"Оператор условия"} />
-          <AddInput type={"text"} placeholder={"Высота фасада"} />
-          <AddInput type={"text"} placeholder={"Цена"} />
-        </GlobalForm>
-        <ListItem
-          details={["Большие", "Sborka extra updated", "<=", "Glass", "9.00 $"]}
-        />
+        <div className="scrollList">
+          <TopList
+            array={[
+              "Название",
+              "Артикул",
+              "Оператор условия",
+              "Высота фасада",
+              "Цена",
+              "Действия",
+            ]}
+          />
+          <GlobalForm>
+            <AddInput type={"text"} placeholder={"Название"} />
+            <AddInput type={"text"} placeholder={"Артикул"} />
+            <AddInput type={"text"} placeholder={"Оператор условия"} />
+            <AddInput type={"text"} placeholder={"Высота фасада"} />
+            <AddInput type={"text"} placeholder={"Цена"} />
+          </GlobalForm>
+          <ListItem
+            details={["Большие", "Sborka extra updated", "<=", "Glass", "9.00 $"]}
+          />
+        </div>
       </div>
       <Pagination totalPages={10} />
     </>

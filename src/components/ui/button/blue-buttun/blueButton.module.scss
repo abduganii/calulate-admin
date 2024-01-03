@@ -13,4 +13,8 @@
   font-weight: 500;
   line-height: normal;
   padding: 17px;
+
+  @media screen and (max-width:950px) {
+    padding: 10px;
+  }
 }

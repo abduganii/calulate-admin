@@ -8,8 +8,10 @@ export default function ClientPage() {
     <>
       <div>
         <Filter page={"client"} />
-        <TopList array={["Клиент", "Тел.номер", "Действия"]} />
-        <ListItem name={"hssse"} tel={"(90) 123-45-67"} />
+        <div className="scrollList">
+          <TopList array={["Клиент", "Тел.номер", "Действия"]} />
+          <ListItem name={"hssse"} tel={"(90) 123-45-67"} />
+        </div>
       </div>
       <Pagination totalPages={10} />
     </>

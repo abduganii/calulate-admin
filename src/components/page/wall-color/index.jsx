@@ -11,27 +11,29 @@ export default function WallColerPage() {
     <>
       <div>
         <Filter page={"colorWall"} />
-        <TopList
-          array={[
-            "Фото",
-            "Название",
-            "Артикул",
-            "Цена",
-            "Индекс сортировки",
-            "Действия",
-          ]}
-        />
-        <GlobalForm>
-          <UploadInput type={"text"} placeholder={"Название"} />
-          <AddInput type={"text"} placeholder={"Название"} />
-          <AddInput type={"text"} placeholder={"Артикул"} />
-          <AddInput type={"text"} placeholder={"Цена"} />
-          <AddInput type={"text"} placeholder={"Индекс сортировки"} />
-        </GlobalForm>
-        <ListItem
-          img={"empty"}
-          details={["Название", "Артикул", "Цена", "Индекс сортировки"]}
-        />
+        <div className="scrollList">
+          <TopList
+            array={[
+              "Фото",
+              "Название",
+              "Артикул",
+              "Цена",
+              "Индекс сортировки",
+              "Действия",
+            ]}
+          />
+          <GlobalForm>
+            <UploadInput type={"text"} placeholder={"Название"} />
+            <AddInput type={"text"} placeholder={"Название"} />
+            <AddInput type={"text"} placeholder={"Артикул"} />
+            <AddInput type={"text"} placeholder={"Цена"} />
+            <AddInput type={"text"} placeholder={"Индекс сортировки"} />
+          </GlobalForm>
+          <ListItem
+            img={"empty"}
+            details={["Название", "Артикул", "Цена", "Индекс сортировки"]}
+          />
+        </div>
       </div>
       <Pagination totalPages={10} />
     </>

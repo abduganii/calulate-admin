@@ -11,22 +11,24 @@ export default function OpenTypePage() {
     <>
       <div>
         <Filter page={"opneType"} />
-        <TopList
-          array={[
-            "Фото",
-            "Название",
-            "Тип расчета",
-            "Индекс сортировки",
-            "Действия",
-          ]}
-        />
-        <GlobalForm>
-          <UploadInput type={"text"} placeholder={"Название"} />
-          <AddInput type={"text"} placeholder={"Название"} />
-          <AddInput type={"text"} placeholder={"Тип расчета"} />
-          <AddInput type={"text"} placeholder={"Индекс сортировки"} />
-        </GlobalForm>
-        <ListItem img={"empty"} details={["Прозрачное", "Glass 1", "1"]} />
+        <div className="scrollList">
+          <TopList
+            array={[
+              "Фото",
+              "Название",
+              "Тип расчета",
+              "Индекс сортировки",
+              "Действия",
+            ]}
+          />
+          <GlobalForm>
+            <UploadInput type={"text"} placeholder={"Название"} />
+            <AddInput type={"text"} placeholder={"Название"} />
+            <AddInput type={"text"} placeholder={"Тип расчета"} />
+            <AddInput type={"text"} placeholder={"Индекс сортировки"} />
+          </GlobalForm>
+          <ListItem img={"empty"} details={["Прозрачное", "Glass 1", "1"]} />
+        </div>
       </div>
       <Pagination totalPages={10} />
     </>

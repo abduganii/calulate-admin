@@ -10,28 +10,29 @@ export default function TypeProfilePage() {
     <>
       <div>
         <Filter page={"typeprofile"} />
-        <TopList
-          array={["Название", "Тип расчета", "Индекс сортировки", "Действия"]}
-        />
-        <GlobalForm>
-          <AddInput
-            type={"text"}
-            placeholder={"Название"}
+        <div className="scrollList">
+          <TopList
+            array={["Название", "Тип расчета", "Индекс сортировки", "Действия"]}
           />
-          <AddInput
-            type={"select"}
-            placeholder={"Выберите тип расчета"}
-            value={'Выберите тип расчета'}
+          <GlobalForm>
+            <AddInput
+              type={"text"}
+              placeholder={"Название"}
+            />
+            <AddInput
+              type={"select"}
+              placeholder={"Выберите тип расчета"}
+              value={'Выберите тип расчета'}
+            />
+            <AddInput
+              type={"number"}
+              placeholder={"count"}
+            />
+          </GlobalForm>
+          <ListItem
+            details={["Стандартный (19 мм)", "Стандартные профили", "1"]}
           />
-          <AddInput
-            type={"number"}
-            placeholder={"count"}
-          />
-        </GlobalForm>
-
-        <ListItem
-          details={["Стандартный (19 мм)", "Стандартные профили", "1"]}
-        />
+        </div>
       </div>
       <Pagination totalPages={10} />
     </>

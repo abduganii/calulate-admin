@@ -85,7 +85,7 @@ export default function Filter({
           <DeleteIcon fill={"#484038"} />
           <p>Удалить</p>
         </div>
-        {page != "order" && page != "client" ? (
+        {page != "order" ? (
           <BlueBtn
             className={`${
               params.get("openMadal") == "post" ||

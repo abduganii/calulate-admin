@@ -1,3 +1,4 @@
+import { useForm } from "react-hook-form";
 import Filter from "../../ui/filter";
 import AddInput from "../../ui/form/add-input";
 import GlobalForm from "../../ui/form/global-form";
@@ -7,6 +8,16 @@ import Pagination from "../../ui/pagination";
 import TopList from "../../ui/top-list";
 
 export default function MoreServicePage() {
+  const {
+    register,
+    handleSubmit,
+    setError,
+    setValue,
+
+    watch,
+    formState: { errors },
+  } = useForm();
+  const watchedFiles = watch();
   return (
     <>
       <div>
@@ -22,12 +33,44 @@ export default function MoreServicePage() {
               "Действия",
             ]}
           />
-          <GlobalForm>
+          <GlobalForm handleSubmit={handleSubmit}>
             <UploadInput type={"text"} placeholder={"Название"} />
-            <AddInput type={"text"} placeholder={"Название"} />
-            <AddInput type={"text"} placeholder={"Артикул"} />
-            <AddInput type={"text"} placeholder={"Цена"} />
-            <AddInput type={"text"} placeholder={"Индекс сортировки"} />
+            <AddInput
+              type={"text"}
+              placeholder={"Название"}
+              register={{
+                ...register("name", { required: "name" }),
+              }}
+              alert={errors.name?.message}
+              value={watchedFiles?.name || ""}
+            />
+            <AddInput
+              type={"text"}
+              placeholder={"Артикул"}
+              register={{
+                ...register("name1", { required: "name" }),
+              }}
+              alert={errors.name1?.message}
+              value={watchedFiles?.name1 || ""}
+            />
+            <AddInput
+              type={"text"}
+              placeholder={"Цена"}
+              register={{
+                ...register("name2", { required: "name" }),
+              }}
+              alert={errors.name2?.message}
+              value={watchedFiles?.name2 || ""}
+            />
+            <AddInput
+              type={"text"}
+              placeholder={"Индекс сортировки"}
+              register={{
+                ...register("name3", { required: "name" }),
+              }}
+              alert={errors.name3?.message}
+              value={watchedFiles?.name3 || ""}
+            />
           </GlobalForm>
           <ListItem
             img={"empty"}

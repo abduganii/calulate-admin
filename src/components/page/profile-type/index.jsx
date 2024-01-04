@@ -16,6 +16,11 @@ export default function TypeProfilePage() {
     formState: { errors },
   } = useForm();
   const watchedFiles = watch();
+  const arr = [
+    { id: 1, name: "text" },
+    { id: 2, name: "text1" },
+    { id: 3, name: "text2" },
+  ];
   return (
     <>
       <div>
@@ -42,8 +47,10 @@ export default function TypeProfilePage() {
             />
             <AddInput
               type={"select"}
+              arr={arr}
+              onChange={(e) => setValue("name3", e)}
               placeholder={"Выберите тип расчета"}
-              value={"Выберите тип расчета"}
+              value={watchedFiles?.name3 || "Выберите тип расчета"}
             />
             <AddInput
               type={"number"}

@@ -8,6 +8,7 @@ import { AddData, UpdateData } from "../../../../services/glabal";
 export default function GlobalForm({
   children,
   handleSubmit,
+
   url,
   method,
   id,

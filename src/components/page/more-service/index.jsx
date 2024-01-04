@@ -6,6 +6,7 @@ import UploadInput from "../../ui/form/upload-input";
 import ListItem from "../../ui/item-list";
 import Pagination from "../../ui/pagination";
 import TopList from "../../ui/top-list";
+import { useState } from "react";
 
 export default function MoreServicePage() {
   const {
@@ -18,6 +19,13 @@ export default function MoreServicePage() {
     formState: { errors },
   } = useForm();
   const watchedFiles = watch();
+  const [file, setfile] = useState();
+
+  const hendleimg = async (e) => {
+    if (e.target.files[0]) {
+      setfile(URL.createObjectURL(e.target.files[0]));
+    }
+  };
   return (
     <>
       <div>
@@ -34,7 +42,12 @@ export default function MoreServicePage() {
             ]}
           />
           <GlobalForm handleSubmit={handleSubmit}>
-            <UploadInput type={"text"} placeholder={"Название"} />
+            <UploadInput
+              onChange={(e) => hendleimg(e)}
+              type={"text"}
+              placeholder={"Название"}
+              value={file}
+            />
             <AddInput
               type={"text"}
               placeholder={"Название"}

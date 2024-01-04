@@ -5,6 +5,7 @@ import Pagination from "../../ui/pagination";
 import TopList from "../../ui/top-list";
 import GlobalForm from "../../ui/form/global-form";
 import AddInput from "../../ui/form/add-input";
+import AddMaskInput from "../../ui/form/add-mask-input";
 
 export default function ClientPage() {
   const {
@@ -32,9 +33,9 @@ export default function ClientPage() {
               alert={errors.name?.message}
               value={watchedFiles?.name || ""}
             />
-            <AddInput
-              type={"text"}
+            <AddMaskInput
               placeholder={"Тел.номер"}
+              mask="+\9\9\8 (99) 999-99-99"
               register={{
                 ...register("name1", { required: "name" }),
               }}

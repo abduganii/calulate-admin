@@ -23,17 +23,18 @@ export default function Login() {
   const watchedFiles = watch();
   const handleAuth = async (data) => {
     // setLoader(true);
-    navigate(`/order?page=1`);
-    // await AuthLogin(data )
-    //   .then((response) => {
-    //    console.log(response);
-    //    navigate(`/order?page=1`);
-    //     setLoader(false);
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //     setLoader(false);
-    //   });
+    console.log(data);
+
+    await AuthLogin(data)
+      .then((response) => {
+        console.log(response);
+        //  navigate(`/order?page=1`);
+        setLoader(false);
+      })
+      .catch((error) => {
+        console.log(error);
+        setLoader(false);
+      });
   };
   return (
     <div className={cls.Login}>
@@ -50,10 +51,10 @@ export default function Login() {
               label={"Логин"}
               placeholder={"Логин"}
               register={{
-                ...register("loginId", { required: "login is required" }),
+                ...register("email", { required: "login is required" }),
               }}
-              alert={errors.loginId?.message}
-              value={watchedFiles?.loginId || ""}
+              alert={errors.email?.message}
+              value={watchedFiles?.email || ""}
               style={{ marginBottom: "20px" }}
             />
             <LoginInput
